@@ -1,0 +1,73 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+nav ul{
+    z-index:1000;
+    -webkit-transition:.5s;
+    -moz-transition:.5s;
+    transition:.5s;
+}
+.custom-nav.active{
+    opacity: 1;
+    color:#fff;
+    -webkit-transition:.5s;
+    -moz-transition:.5s;
+    transition:.5s;
+}
+
+
+
+
+.custom-nav{
+    background-color: #ffffff!important;
+
+}
+
+.custom-nav ul li a, .custom-nav ul li p{
+    line-height: 50px!important;
+    color: #000!important;
+    font-size: 16px!important;
+
+}
+
+
+
+.custom-brand{
+    padding: 0;
+}
+
+
+.hero-section {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    height: 100vh;
+    background: url(../img/hero-img.jpg) center center / cover no-repeat;
+}
+
+
+.hero-section .hero-txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 5em;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
