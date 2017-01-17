@@ -10,10 +10,10 @@ body{
     line-height: 1.6em;
     overflow-x: hidden;
     color: #565a5c;
+    position: relative;
 }
 
 a[href]:not([class]){
-    color: #999;
     text-decoration: underline;
 }
 
@@ -27,6 +27,14 @@ h1 ,h2,h3,h4,h5,h6{
     font-family: "David-Bold",  "Open Sans" ,sans-serif ;
     color: #191919;
 }
+
+/*@media screen and (max-width: 769px){*/
+    /*h1 ,h2,h3,h4,h5,h6{*/
+        /*text-align: center;*/
+    /*}*/
+
+
+    /*}*/
 
 
 /*//////////////////////////////////////////////////////////////////////////////////
@@ -48,6 +56,7 @@ section{
     border-radius: 0;
     border: 0;
     max-width: 100%;
+
 }
 
 .button span{
@@ -70,6 +79,8 @@ section{
     top: 0;
     left: 0;
     transition: all .5s;
+    border: 1px solid #e1e1e1;
+
 }
 
 .button:hover:before{
@@ -106,6 +117,37 @@ section{
     color: #fff;
 }
 
+
+/*//////////////// Social list////////////////////////*/
+
+.social-list{
+    padding-left: 0;
+}
+
+
+.social-list li {
+    list-style: none;
+    display: inline-block;
+}
+
+
+.social-list li  a{
+    color: #fff;
+    font-size: 1.3em;
+    list-style: none;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.32);
+    text-align: center;
+
+}
+
+/*/////////////////////////////////ends here/////////////////////////*/
+
 /*//////////////////////////////////////////////////////////////////////////////////
                                  Navigation Section
 //////////////////////////////////////////////////////////////////////////////////*/
@@ -130,19 +172,70 @@ nav ul{
 
 }
 
-.custom-nav ul li a, .custom-nav ul li p{
+.custom-nav ul li a{
     line-height: 50px;
     color: #000;
-    font-size: 16px;
+    font-size: 14px;
+    transition: all .4s ease-in-out;
+}
+
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+    text-decoration: line-through;
+    transition: all .4s ease-in-out;
+
 
 }
 
-.custom-nav ul li:last-child a{
+
+.custom-nav ul li:nth-child(8) a{
     background-color: #ec8244;
     line-height: 20px;
     margin: 15px 0;
     color: #fff;
 }
+
+.custom-nav ul li:nth-child(8) a:hover{
+    background-color: #ec8244;
+    line-height: 20px;
+    margin: 15px 0;
+    color: #fff;
+}
+
+.custom-nav ul li:nth-child(8) a:focus{
+    background-color: #ec8244;
+    line-height: 20px;
+    margin: 15px 0;
+    color: #fff;
+}
+
+
+.search-container{
+    position: absolute;
+    top: 0;
+    background-color: #1f1f1f;
+    height: 100vh;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    -moz-justify-content: center;
+    -moz-align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-closed{
+    width: 100%;
+    transform: translateX(-100%);
+    transition: all .4s ease-in-out;
+
+}
+
+.search-open{
+    transform: translateX(100%);
+}
+
+
 
 .custom-brand{
     padding: 0;
@@ -240,28 +333,104 @@ nav ul{
     color: #fff;
 }
 
-#footer-section .social-list{
-    padding-left: 0;
+
+
+
+/*//////////////////////////////////////////////////////////////////////////////////
+                                 Sign up Section
+//////////////////////////////////////////////////////////////////////////////////*/
+
+#signup-section{
+    background-color: #f5f5f5;
+    height: 100vh;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    -moz-justify-content: center;
+    -moz-align-items: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card{
+    background-color: #fff;
+    overflow: inherit;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.23), inset 1px 1px 0 0 hsla(0,0%,100%,.2);
+    padding: 5%;
+}
+
+#signup-section form > h2{
+    color: #ec8244;
+    font-family: "Open Sans", sans-serif;
+    margin: 60px 0 30px 0;
 }
 
 
-#footer-section .container .social-list li {
-    list-style: none;
-    display: inline-block;
+#signup-section form .form-group input{
+    border-radius: 0;
+    width: 100%;
+    box-shadow: none;
+    background-color: #f6f6f6;
+    border: 1px solid #dadada;
+    padding: 25px;
+
 }
 
 
-#footer-section .container .social-list li > a{
-    color: #fff;
-    font-size: 1.3em;
-    list-style: none;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+#signup-section form .form-group button {
+    margin: 20px 0;
+
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////
+                                 Member profile Section
+//////////////////////////////////////////////////////////////////////////////////*/
+
+@media screen and (min-width: 769px) {
+    #member-profile-section{
+        padding-top: 80px;
+    }
+
+
+    }
+
+#member-profile-section{
+    background-color: #f5f5f5;
+
+}
+
+#member-profile-section .card {
+    padding: 3%;
+}
+
+
+#member-profile-section .joined{
+    position: relative;
+    margin-top: -70px;
+}
+
+
+
+#member-profile-section .joined-d{
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    margin: 5px;
-    background-color: rgba(255, 255, 255, 0.32);
-    text-align: center;
+    background-color: teal;
+    color: #ffffff;
+    font-size: 13px;
+    transform: translate(-50%);
+
+}
+
+
+#member-profile-section .joined-d p:not(:last-child){
+    margin: 0;
+    padding-top: 22px;
+
 
 }
