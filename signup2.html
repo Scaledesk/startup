@@ -9,17 +9,20 @@
     <title>Startup India</title>
     <meta name="description" content="">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <!--Roboto font included-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
         body {
-            padding-top: 50px;
+            padding: 0px 20px;
         }
     </style>
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
 
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
@@ -47,7 +50,6 @@
 <!--///////////////////////////////////////////////////////////////////////////////////
                                    Header and Navigation
 ///////////////////////////////////////////////////////////////////////////////////-->
-
 
 
 
@@ -95,44 +97,161 @@
 
 <section id="signup-section">
     <div class="container">
-        <div class="card">
-            <div class="row">
-                <div class="col-md-6">
-                    <form action="">
-                        <h2 class="form-title">Sign up</h2>
+        <br>
 
-                        <div class="form-group">
-                            <input type="number" placeholder="Mobile no" class="form-control" />
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" placeholder="street" class="form-control" />
-                        </div>
+        <div class="row">
 
 
-                        <div class="form-group">
-                            <input type="text" placeholder="City" class="form-control" />
-                        </div>
+
+            <div class="col-md-12">
 
 
-                        <div class="form-group">
-                            <button type="submit"  class="btn button">
-                                <span>Verified</span>
-                            </button>
-                        </div>
+                <div class="form-contain-signup2">
 
-                    </form>
+                        <h2>Sign Up</h2>
+
+
+
+                        <form id="girisyap" name="signup_form" id="signup_form" method="post" enctype="multipart/form-data" onsubmit="return false;">
+
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label" for="inputNormal">Company Name</label>
+                                <input type="text" name="company_username" id="signup_cname" class="bp-suggestions form-control" cols="50" rows="10" ></input>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="control-label" for="inputNormal">Founder/Co-Founder</label>
+                                <input type="text" name="founder" id="founder" value="" class="bp-suggestions form-control" cols="50" rows="10"></input>
+                            </div>
+
+                                    <div class="row">
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label" for="inputNormal">Industry/Sector</label>
+                                                <input type="text" name="signup_industry" id="signup_industry" class="bp-suggestions form-control" cols="50" rows="10"></input>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label" for="inputNormal">Mobile</label>
+                                                <input type="number" name="signup_email" id="signup_mobile" class="bp-suggestions form-control" cols="50" rows="10"></input>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                            <div class="form-group">
+                                <label class="control-label" for="inputNormal">Address</label>
+                                <input type="text" name="signup_address" id="signup_address" value="" class="bp-suggestions form-control" cols="50" rows="10" ></input>
+                            </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="inputNormal">Facebook Id</label>
+                                        <input type="password" name="signup_password" id="signup_password" value="" class="bp-suggestions form-control" cols="50" rows="10" ></input>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label" for="inputNormal">Twitter Id</label>
+                                        <input type="password" name="signup_password" id="signup_password" value="" class="bp-suggestions form-control" cols="50" rows="10" ></input>
+                                    </div>
+                                    </div>
+
+
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="inputNormal">Designate Member</label>
+                                        <input type="text" name="signup_username" id="signup_username" class="bp-suggestions form-control" cols="50" rows="10" ></input>
+                                    </div>
+
+                                             <div class="row">
+                                             <div class="col-xs-6">
+                                             <div class="form-group">
+                                                <label class="control-label" for="inputNormal">Website</label>
+                                              <input type="text" name="field_1" id="field_1" value="" class="bp-suggestions form-control" cols="50" rows="10"></input>
+                                              </div>
+                                             </div>
+
+                                               <div class="col-xs-6">
+                                                <div class="form-group">
+                                                 <label class="control-label" for="inputNormal">Dipp No.</label>
+                                                 <input type="text" name="field_1" id="field_1" value="" class="bp-suggestions form-control" cols="50" rows="10"></input>
+                                                 </div>
+                                               </div>
+
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label" for="inputNormal">Email</label>
+                                        <input type="text" name="signup_email" id="signup_email" class="bp-suggestions form-control" cols="50" rows="10"></input>
+                                    </div>
+
+
+
+                                    <div class="row">
+
+                                        <div class="col-xs-4">
+                                            <div class="form-group">
+                                                <label class="control-label" for="inputNormal">City</label>
+                                                <input type="text" name="signup_email" id="signup_email" class="bp-suggestions form-control" cols="50" rows="10"></input>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-4">
+                                            <div class="form-group">
+                                                <label class="control-label" for="inputNormal">State</label>
+                                                <input type="text" name="signup_email" id="signup_email" class="bp-suggestions form-control" cols="50" rows="10"></input>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-4">
+                                            <div class="form-group">
+                                                <label class="control-label" for="inputNormal">Pincode</label>
+                                                <input type="text" name="signup_email" id="signup_email" class="bp-suggestions form-control" cols="50" rows="10"></input>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="form-group">
+                                        <label class="control-label" for="inputNormal">LinkedIn Id</label>
+                                        <input type="password" name="signup_password" id="signup_password" value="" class="bp-suggestions form-control" cols="50" rows="10" ></input>
+                                    </div>
+
+
+
+                                    <div class="form-group">
+                                        <label class="control-label" for="inputNormal">Password</label>
+                                        <input type="password" name="signup_password" id="signup_password" value="" class="bp-suggestions form-control" cols="50" rows="10" ></input>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <input type="submit" name="signup_submit" id="signup_submit" value="Sign Up" class="girisbtn"  />
+                        </form>
+                        <!-- <button id="moveleft">Sign Up</button>-->
+
+
 
                 </div>
-
-                <div class="col-md-6 text-center">
-                    <img src="img/hero-info.png" alt="" width="80%">
-
-                </div>
-
             </div>
         </div>
+
+
     </div>
+
+
+
+
 </section>
 
 
@@ -140,47 +259,61 @@
                                    Footer Section
 ///////////////////////////////////////////////////////////////////////////////////-->
 
-<section id="footer-section">
+<section id="footer-section" class="bg-darkgreen">
+
     <div class="container">
-        <div class="row">
-            <div class="col-md-5">
-                <img src="img/logo.png" alt="">
-                <br>
+        <!--  <div class="footer-border">-->
+        <div class="container" style="padding:70px;">
+            <div class="row">
 
-                <p>Its main objective is “To promote business incubation support activities in the country through exchange of information, sharg </p>
 
-                <ul class="social-list">
-                    <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                    <li><a href=""><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                    <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                <div class="col-md-5">
+                    <div class="custom-box-footer">
+                        <img src="img/logo.png" alt="">
 
-                </ul>
+                        <br>
+
+                        <p class="f-w">Its main objective is “To promote business incubation support activities in the country through exchange of information, sharg </p>
+
+                        <ul class="social-list">
+                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                            <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fa fa-instagram"></i></a></li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+                    <div class="custom-box-footer">
+                        <p class="p-heading f-w">USEFUL LINKS</p>
+                        <p><a href="" class="f-w">Home</a></p>
+                        <p><a href="" class="f-w">About Us</a></p>
+                        <p><a href="" class="f-w">Our Members</a></p>
+                        <p><a href="" class="f-w">Discussions</a></p>
+                        <p><a href="" class="f-w">News</a></p>
+                        <p><a href="" class="f-w">Awards</a></p>
+                        <p><a href="" class="f-w">Contact Us</a></p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="custom-box-footer">
+                        <p class="p-heading f-w">FOLLOW US NOW</p>
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fscaledesk%2F&tabs=timeline&width=265&height=230&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="265" height="230" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe> </div>
+                </div>
 
             </div>
-
-            <div class="col-md-3">
-                <p><a href="">Home</a></p>
-                <p><a href="">About Us</a></p>
-                <p><a href="">Our Members</a></p>
-                <p><a href="">Discussions</a></p>
-                <p><a href="">News</a></p>
-                <p><a href="">Awards</a></p>
-                <p><a href="">Contact Us</a></p>
-
-
-
-            </div>
-
-
-            <div class="col-md-4">
-
-            </div>
-
         </div>
+        <!--  </div>-->
     </div>
 </section>
-
 
 
 
@@ -193,6 +326,7 @@
 <script src="js/vendor/bootstrap.min.js"></script>
 
 <script src="js/main.js"></script>
+<script src="js/login.js"></script>
 
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
