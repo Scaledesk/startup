@@ -515,8 +515,119 @@ padding: 0px;
 
 
 /*//////////////////////////////////////////////////////////////////////////////////
-                                 login-garima Section
+                                memberpro-garima Section
 //////////////////////////////////////////////////////////////////////////////////*/
+
+#member-profile-section {
+    background-color: #f5f5f5;
+}
+#member-profile-section .joined {
+    position: relative;
+    margin-top: -70px;
+}
+
+#member-profile-section .joined-d {
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: teal;
+    color: #ffffff;
+    font-size: 13px;
+    transform: translate(-50%);
+}
+
+#member-profile-section .joined-d p:not(:last-child) {
+    margin: 0;
+    padding-top: 22px;
+}
+
+#member-profile-section .social-list{
+    padding-top: 54px;
+}
+
+.card-profile{
+
+    background-color: #fff;
+    overflow: inherit;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.23), inset 1px 1px 0 0 hsla(0,0%,100%,.2);
+    padding: 3%;
+}
+
+
+#member-profile-section .card {
+width:70%;
+
+    height: 90px;
+
+}
+
+.right-border{
+    border-right: 1px solid #e5e5e5;
+    height: 230px;
+}
+
+#member-profile-section .custom-box-footer{
+    width:230px;
+    max-width: 100%;
+
+    margin: 10px auto;
+}
+
+
+.search-control {
+    display: block;
+    width: 100%;
+    height: 52px;
+    padding: 19px 25px;
+    font-size: 20px !important;
+    line-height: 1.42857143;
+    color: #EF973B;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid #fff;
+    border-right: 0px;
+    border-radius: 0 !important;
+    z-index: 0!important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    /* box-shadow: inset 0 1px 1px rgba(0,0,0,.075); */
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-
+}
+
+.input-group-addon {
+    font-family: 'Open Sans', sans-serif;
+    padding: 12px 30px;
+
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    color: #ffffff;
+    /* background: #EB7C08!important; */
+    background: transparent!important;
+    text-align: center;
+    border: 1px solid #fff;
+    border-left: 0px;
+    border-radius: 0 !important;
+    cursor: pointer;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+/*
+
+profile registration form
+*/
+
+
+
+
+
+
 
 
 
@@ -598,6 +709,10 @@ theme colors*/
 
 .bg-darkgreen{
     background-color: #016b6b;
+}
+
+.bg-lightgreen{
+    background-color: #12c3b3;
 }
 
 /*themecolors end*/
