@@ -533,7 +533,7 @@ padding: 0px;
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: teal;
+    background-color: #ec8244;
     color: #ffffff;
     font-size: 13px;
     transform: translate(-50%);
@@ -617,6 +617,10 @@ width:70%;
     overflow: hidden;
 }
 
+.fa-custom{
+    font-size: 52px!important;
+}
+
 
 /*
 
@@ -685,6 +689,16 @@ theme colors*/
 
 .f-w{
     color: #ffffff;
+}
+
+.f-or{
+    color:#ec8244;
+}
+
+.bg-or{
+    background-color: #ec8244;
+    background-image: none;
+    border-color: #fff;
 }
 
 .bg-grey{
