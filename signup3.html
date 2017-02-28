@@ -21,6 +21,7 @@
         }
     </style>
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap-tagsinput.css">
     <link rel="stylesheet" href="css/main.css">
 
 
@@ -111,7 +112,7 @@
 
                 <div class="form-group">
                     <label class="p-heading" for="designateperson">Designate Person</label>
-                    <input type="text" class="form-control" id="designateperson" placeholder="Email">
+                    <input type="text" class="form-control" id="designateperson" placeholder="Designate Person">
                 </div>
 
                 <div class="form-group">
@@ -134,14 +135,14 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                             <label  class="p-heading"  for="mobile1">Mobile</label>
-                            <input type="number" class="form-control" id="mobile1" placeholder="Email">
+                            <input type="number" class="form-control" id="mobile1" placeholder="Mobile">
                                </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="form-group">
                             <label  class="p-heading"  for="pincode1">PINCODE</label>
-                            <input type="number" class="form-control" id="pincode1" placeholder="Email">
+                            <input type="number" class="form-control" id="pincode1" placeholder="PINCODE">
                                 </div>
                             </div>
 
@@ -149,7 +150,7 @@
 
                         <div class="form-group">
                             <label  class="p-heading"  for="address1">  Address </label>
-                            <input type="text" class="form-control" id="address1" placeholder="Email">
+                            <input type="text" class="form-control" id="address1" placeholder="Address">
                         </div>
 
                         <div class="row">
@@ -157,7 +158,7 @@
 
                         <div class="form-group">
                             <label class="p-heading"  for="city1">City</label>
-                            <input type="text" class="form-control" id="city1" placeholder="Email">
+                            <input type="text" class="form-control" id="city1" placeholder="City">
                         </div>
                             </div>
 
@@ -165,7 +166,7 @@
 
                         <div class="form-group">
                             <label class="p-heading"  for="State1">State</label>
-                            <input type="text" class="form-control" id="State1" placeholder="Email">
+                            <input type="text" class="form-control" id="State1" placeholder="State">
                         </div>
 
                             </div>
@@ -184,13 +185,13 @@
                     <label class="f-or">COMPANY</label>
                 <div class="form-group">
                     <label class="p-heading"  for="dippno">DIPP No</label>
-                    <input type="text" class="form-control" id="dippno" placeholder="Email">
+                    <input type="number" class="form-control" id="dippno" placeholder="DIPP No.">
                 </div>
 
 
                 <div class="form-group">
                     <label class="p-heading"  for="companyname">Company Name</label>
-                    <input type="text" class="form-control" id="companyname" placeholder="Email">
+                    <input type="text" class="form-control" id="companyname" placeholder="Company Name">
                 </div>
 
 
@@ -198,31 +199,85 @@
 
                 <div class="form-group">
                     <label class="p-heading"  for="founder1"> Founder/ Co-Founder</label>
-                    <input type="text" class="form-control" id="founder1" placeholder="Email">
+                    <input type="text" class="form-control" id="founder1" placeholder="Founder/ Co-Founder">
                 </div>
 
                 <div class="form-group">
                     <label class="p-heading"  for="website1"> Website</label>
-                    <input type="text" class="form-control" id="website1" placeholder="Email">
+                    <input type="text" class="form-control" id="website1" placeholder="Website">
                 </div>
 
 
                 <div class="form-group">
-                    <label class="p-heading"  for="sector1"> Industry/ Sector </label>
-                    <input type="text" class="form-control" id="sector1" placeholder="Email">
+                    <label class="p-heading"> Industry/ Sector </label>
+                    <!--<input type="text" class="form-control" id="sector1" placeholder="Industry/ Sector">-->
+
+                    <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
-                    <label class="p-heading"  for="providesupport">PROVIDE support and help for</label>
-                    <input type="text" class="form-control" id="providesupport" placeholder="Email">
+                    <label class="p-heading" >PROVIDE support and help for</label>
+                    <!--<input type="text" class="form-control" id="providesupport" placeholder="Email">-->
+                    <input type="text" value="Amsterdam,Washington" data-role="tagsinput" />
+                    <script>
+                        var citynames = new Bloodhound({
+                            datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+                            queryTokenizer: Bloodhound.tokenizers.whitespace,
+                            prefetch: {
+                                url: 'assets/citynames.json',
+                                filter: function(list) {
+                                    return $.map(list, function(cityname) {
+                                        return { name: cityname }; });
+                                }
+                            }
+                        });
+                        citynames.initialize();
+
+                        $('input').tagsinput({
+                            typeaheadjs: {
+                                name: 'citynames',
+                                displayKey: 'name',
+                                valueKey: 'name',
+                                source: citynames.ttAdapter()
+                            }
+                        });
+                    </script>
                 </div>
 
+                    <div class="form-group">
+                        <label class="p-heading" >NEED Support And Help For</label>
+                        <!--<input type="text" class="form-control" id="providesupport" placeholder="Email">-->
+                        <input type="text" value="Amsterdam,Washington" data-role="tagsinput" />
+                        <script>
+                            var citynames = new Bloodhound({
+                                datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+                                queryTokenizer: Bloodhound.tokenizers.whitespace,
+                                prefetch: {
+                                    url: 'assets/citynames.json',
+                                    filter: function(list) {
+                                        return $.map(list, function(cityname) {
+                                            return { name: cityname }; });
+                                    }
+                                }
+                            });
+                            citynames.initialize();
 
-
-                <div class="form-group">
-                    <label class="p-heading"  for="needsupport">NEED support and help for</label>
-                    <input type="text" class="form-control" id="needsupport" placeholder="Email">
-                </div>
+                            $('input').tagsinput({
+                                typeaheadjs: {
+                                    name: 'citynames',
+                                    displayKey: 'name',
+                                    valueKey: 'name',
+                                    source: citynames.ttAdapter()
+                                }
+                            });
+                        </script>
+                    </div>
 
 
                     </div>
@@ -278,43 +333,72 @@
                     <input type="text" class="form-control" id="brandname" placeholder="Email">
                 </div>
 
+
+                    <div class="row">
+                        <div class="col-md-6">
                 <div class="form-group">
                     <label class="p-heading"  for="business1"> Type of Business</label>
-                    <input type="text" class="form-control" id="business1" placeholder="Email">
+                    <select class="form-control">
+                        <option>B2B</option>
+                        <option>B2C</option>
+                        <option>C2B</option>
+                        <option>B2B2C</option>
+
+                    </select>
                 </div>
+                        </div>
+
+                        <div class="col-md-6">
 
                 <div class="form-group">
                     <label class="p-heading"  for="url1">URL link</label>
                     <input type="text" class="form-control" id="url1" placeholder="Email">
                 </div>
 
-                <div class="form-group">
-                    <label class="p-heading"  for="description1">  Brief Description </label>
-                    <input type="text" class="form-control" id="description1" placeholder="Email">
-                </div>
+                        </div>
+                    </div>
 
                 <div class="form-group">
-                    <label class="p-heading"  for="lid"> Logo / Image</label>
-                    <input type="text" class="form-control" id="lid" placeholder="Email">
+                    <label class="p-heading">  Brief Description </label>
+                    <textarea class="form-control" placeholer="Brief Description">
+                                      </textarea>
                 </div>
 
                 <div class="form-group">
                     <label class="p-heading"  for="aboutc"> About the product/ company</label>
-                    <input type="text" class="form-control" id="aboutc" placeholder="Email">
+                    <input type="text" class="form-control" id="aboutc" placeholder=" About the product / company">
                 </div>
 
                 <div class="form-group">
                     <label class="p-heading"  for="videolink"> Video Link to embed</label>
-                    <input type="text" class="form-control" id="videolink" placeholder="Email">
+                    <input type="text" class="form-control" id="videolink" placeholder="Video Link">
                 </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
 
                 <div class="form-group">
-                    <label class="p-heading"  for="investordeck"> Investor Deck</label>
-                    <input type="text" class="form-control" id="investordeck" placeholder="Email">
+
+                    <div class="form-group">
+                        <label class="p-heading"> Investor Deck</label>
+                        <input type="file" id="exampleInputFile">
+
+                    </div>
                 </div>
+                        </div>
+
+                    <div class="form-group">
+
+                        <div class="form-group">
+                            <label class="p-heading"> Logo / Image</label>
+                            <input type="file" id="exampleInputFile">
+
+                        </div>
+                    </div>
 
 
-</div>
+                    </div>
+                </div>
 
 <br>
 <div class="row">
@@ -401,7 +485,7 @@
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
 <script src="js/vendor/bootstrap.min.js"></script>
-
+<script src="js/bootstrap-tagsinput.js"></script>
 <script src="js/main.js"></script>
 <script src="js/login.js"></script>
 
