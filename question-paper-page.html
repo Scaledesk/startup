@@ -19,11 +19,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
         body {
-            padding-top: 30px;
+            padding-top: 50px;
         }
     </style>
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/editor.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
@@ -84,29 +86,6 @@
     <div class="container">
         <br>
 
-                <div class="card-profile m-b-30">
-                    <div class="row p-30">
-                       <div class="col-md-2 text-center">
-                          <img src="img/test.png" width="60%">
-                           <p class="p-heading f-green f-20"> Lorem Ipsum</p>
-                       </div>
-                        <div class="col-md-10">
-                            <p class="f-30 f-green"> Lorem ipsum dolor sit amet, Accusamus dolor consequuntur dolores esse?</p>
-                            <p class="f-16 p-10"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias aut debitis earum eum labore molestias perferendis quia quos? Amet assumenda itaque iusto laudantium magni minus nam sit suscipit verital,  consectetur adipisicing elit</p>
-
-                            <button type="submit" class="btn btn-primary btn-lg button-custom">Answer it</button>
-                        </div>
-
-
-
-                    </div> <!--first card end-->
-
-
-
-
-            </div>
-
-
 
         <div class="card-profile m-b-30">
             <div class="row p-30">
@@ -118,7 +97,7 @@
                     <p class="f-30 f-green"> Lorem ipsum dolor sit amet, Accusamus dolor consequuntur dolores esse?</p>
                     <p class="f-16"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias aut debitis earum eum labore molestias perferendis quia quos? Amet assumenda itaque iusto laudantium magni minus nam sit suscipit verital,  consectetur adipisicing elit</p>
 
-                    <button type="submit" class="btn btn-primary btn-lg button-custom">Answer it</button>
+                    <button type="submit" class="btn btn-primary btn-lg button-custom" data-toggle="collapse" data-target="#demo">Answer it</button>
                 </div>
 
 
@@ -130,6 +109,26 @@
 
         </div>
 
+        <div id="demo" class="collapse">
+        <div id="txtEditor"></div>
+        </div>
+
+<div class="bg-darkgrey p-30">
+            <div class="row">
+                <div class="col-md-2 text-center">
+                    <img src="img/test.png" width="60%">
+                    <p class="p-heading f-green f-20"> Lorem Ipsum</p>
+                </div>
+                <div class="col-md-10">
+                    <p class="f-16"> <span><i class="fa fa-clock-o" aria-hidden="true"></i> 20 Mints ago </span>&nbsp;&nbsp;<span><i class="fa fa-map-marker" aria-hidden="true"></i> New Delhi </span></p>
+                    <p class="f-16"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias aut debitis earum eum labore molestias perferendis quia quos? Amet assumenda itaque iusto laudantium magni minus nam sit suscipit verital,  consectetur adipisicing elit</p>
+
+
+
+                </div>
+            </div>
+
+</div>
 
 
 
@@ -203,15 +202,20 @@
 
 
 
+<script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
 <script src="https://use.fontawesome.com/d4bfffe885.js"></script>
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
 <script src="js/vendor/bootstrap.min.js"></script>
 
 <script src="js/main.js"></script>
+<script src="js/editor.js"></script>
 
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -224,7 +228,11 @@
     ga('create','UA-XXXXX-X','auto');ga('send','pageview');
 </script>
 
-
+<script type="text/javascript">
+    $(document).ready( function() {
+        $("#txtEditor").Editor();
+    });
+</script>
 
 </body>
 </html>
