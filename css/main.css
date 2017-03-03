@@ -203,21 +203,21 @@ nav ul{
 }
 
 
-.custom-nav ul li:nth-child(8) a{
+.custom-nav ul li:nth-child(9) a{
     background-color: #ec8244;
     line-height: 20px;
     margin: 15px 0;
     color: #fff;
 }
 
-.custom-nav ul li:nth-child(8) a:hover{
+.custom-nav ul li:nth-child(9) a:hover{
     background-color: #ec8244;
     line-height: 20px;
     margin: 15px 0;
     color: #fff;
 }
 
-.custom-nav ul li:nth-child(8) a:focus{
+.custom-nav ul li:nth-child(9) a:focus{
     background-color: #ec8244;
     line-height: 20px;
     margin: 15px 0;
@@ -628,7 +628,9 @@ width:70%;
     font-size: 52px!important;
 }
 
-
+.tags{
+    font-weight: 400;
+}
 
 
 /*//////////////////////////////////////////////////////////////////////////////////
@@ -743,6 +745,8 @@ theme colors*/
 
 .bg-or{
     background-color: #ec8244;
+    border: 1px solid #fff;
+    background-image: none;
 
 }
 
